@@ -1,0 +1,29 @@
+<!-- views/pages/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1 class="text-center">Airport Flight Departures</h1>
+    <p class="text-center">Get the latest flight departures</p>
+    <form action="/departures/" method="get" class="text-center">
+      <input id="airportCode" type="text" name="airportCode" value="AMS">
+      <input type="submit" value="Go">
+    </form>
+  </div>
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>
