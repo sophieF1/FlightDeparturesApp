@@ -11,7 +11,7 @@ pids
 
 # dotenv environment variables file
 .env
-
+.DS_Store
 .idea/
 node_modules/
 
