@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var scrapeItService = require('../services/scraperService');
+var airportScraper = require('../services/airportScraper');
 
-router.get('/', function(req, res) {
-    res.render('pages/departures', {airportCode: req.query.airportCode});
-    scrapeItService.scrapeIt();
-});
+router.get('/', (req, res) => {
+    airportScraper.getDepartures(req.query.airportCode)
+    .then((departures) => {
+      console.log('Departures', departures);
+      res.render('pages/departures', {airportCode: req.query.airportCode, departures: departures})
+    }).catch((error) => {
+      res.json(error)
+    })
+  })
+  
 
 module.exports = router;

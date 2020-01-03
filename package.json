@@ -1,6 +1,6 @@
 {
   "name": "flightDeparturesApp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"
@@ -8,14 +8,16 @@
   "dependencies": {
     "body-parser": "~1.16.0",
     "cheerio": "^1.0.0-rc.2",
+    "cheerio-req": "^1.2.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
     "morgan": "~1.7.0",
     "request": "^2.83.0",
-    "scrape-it": "^4.0.0",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "tinyreq": "^3.4.1",
+    "website-scraper": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.15.0"
